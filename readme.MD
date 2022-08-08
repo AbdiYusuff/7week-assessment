@@ -8,7 +8,7 @@
 
 - [ ]  Read over the results, and write a paragraph that explains the pattern you see. How does each function “scale”? Which of the two functions scales better? How can you tell?
 
-The doublerAppend increases more steadily compared doublerInsert. The both functions start at microseconds. Interestingly enough, the doublerInsert increases more slowly initially. However, the doublerInsert spikes quite fast when it gets to largeArray, going from microseconds to milliseconds to seconds. In comparison, doublerAppend remains increasing at steadier increments, going from microseconds to milliseconds. As getSizedArray(size) is doubled, the runtime for doublerAppend increases somewhat proportionally while doublerInsert increases exponentially. Therefore: 
+The doublerAppend increases more steadily compared doublerInsert. The both functions start at microseconds. Interestingly enough, the doublerInsert increases more slowly initially. However, the doublerInsert spikes quite fast when it gets to largeArray, going from microseconds to milliseconds to seconds. In comparison, doublerAppend remains increasing at steadier increments, going from microseconds to milliseconds. As the input in the getSizedArray(size) grows, the runtime for doublerAppend increases somewhat proportionally while doublerInsert increases exponentially. Therefore: 
 doublerAppend is: O(n)
 doublerInsert is: O(n^2)
 
